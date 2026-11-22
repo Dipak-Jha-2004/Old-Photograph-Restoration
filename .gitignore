@@ -1,0 +1,72 @@
+# =============================================================================
+# Git Ignore Configuration for Old Photograph Restoration & Enhancement
+# =============================================================================
+
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Python Bytecode & Cache
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Pretrained Model Checkpoints & Deep Learning Weights
+# (Excluded from Git due to GitHub 100MB file limit)
+# Download all models automatically via: python utils/model_downloader.py --all
+models/pretrained/*
+!models/pretrained/.gitkeep
+
+gfpgan/weights/*
+!gfpgan/weights/.gitkeep
+
+*.pth
+*.pt
+*.onnx
+*.caffemodel
+*.bin
+*.ckpt
+
+# Private Photographs & User Personal Samples
+test_samples/family_*
+*family*
+faces_detected.png
+
+# User Uploads & Processing Outputs
+uploads/*
+!uploads/.gitkeep
+outputs/*
+!outputs/.gitkeep
+scratch/
+
+# Temporary Files & Logs
+*.log
+*.tmp
+*.temp
+
+# Environment & Sensitive Configuration
+.env
+*.env
+.env.*
+*.key
+*.pem
+secrets.json
+
+# IDE & Operating System Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
